@@ -104,7 +104,7 @@ We will just talk about:
 
 {{< fa brands github >}} &nbsp;Collaboration
 
-{{< fa brands markdown >}} &nbsp;~~Manuscript~~
+{{< fa brands markdown >}} &nbsp;~~*Manuscript*~~
 
-{{< fa brands r-project >}} &nbsp;~~Code & Software~~
+{{< fa brands r-project >}} &nbsp;~~*Code & Software*~~
 
