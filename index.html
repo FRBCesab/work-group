@@ -436,11 +436,77 @@
 <p><i class="fa-brands fa-r-project" aria-label="r-project"></i> &nbsp;Code &amp; Software</p>
 </div>
 </div>
+<aside><ol class="aside-footnotes"><li id="fn4"><p><a href="https://doi.org/10.1371/journal.pcbi.1005510" class="uri">https://doi.org/10.1371/journal.pcbi.1005510</a></p></li></ol></aside></section></section>
+<section>
+<section id="fa-database-data-management" class="title-slide slide level1 center">
+<h1><i class="fa-solid fa-database" aria-label="database"></i> &nbsp;Data management</h1>
+
+</section>
+<section id="raw-data" class="slide level2">
+<h2>Raw data</h2>
+<p><strong>General recommendations</strong><sup>1</sup></p>
+<ul>
+<li>Save and backup the raw data</li>
+<li>Never modify raw data (even for minor changes)</li>
+<li>Raw data should be in a read-only mode (🔒)</li>
+<li>Any modification produces an output or a derived data</li>
+<li>Write code for data acquisition (when possible)
+<ul>
+<li>database requests</li>
+<li>API requests</li>
+<li><code>download.file()</code>, <code>wget</code>, <code>curl</code>, etc.</li>
+</ul></li>
+<li>Describe and document raw data (<code>README</code>, metadata, etc.)</li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn5"><p><a href="https://doi.org/10.1371/journal.pcbi.1005510" class="uri">https://doi.org/10.1371/journal.pcbi.1005510</a></p></li></ol></aside></section>
+<section id="derived-data" class="slide level2">
+<h2>Derived data</h2>
+<p><strong>General recommendations</strong><sup>1</sup></p>
+<ul>
+<li>Modified raw data become a derived data (or an output)</li>
+<li>Record all the steps used to process data (<i class="fa-brands fa-r-project" aria-label="r-project"></i> <code>|</code> <i class="fa-brands fa-python" aria-label="python"></i> <code>|</code> <i class="fa-solid fa-terminal" aria-label="terminal"></i>)</li>
+<li>Create the data you wish to see in the world</li>
+<li>Create analysis-friendly data: <code>tidy data</code></li>
+</ul>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/tidy-data.jpg" style="width:50.0%"></p>
+<figcaption>Source: <a href="https://allisonhorst.com/other-r-fun" class="uri">https://allisonhorst.com/other-r-fun</a></figcaption>
+</figure>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn6"><p><a href="https://doi.org/10.1371/journal.pcbi.1005510" class="uri">https://doi.org/10.1371/journal.pcbi.1005510</a></p></li></ol></aside></section>
+<section id="data-submission" class="slide level2">
+<h2>Data submission</h2>
+<ul>
+<li>Submit data to a <strong>reputable DOI-issuing repository</strong> so that others can access and cite it: <a href="https://zenodo.org/">Zenodo</a>, <a href="https://osf.io/">OSF</a>, etc.</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>Write a <strong>data paper</strong>: <a href="https://www.nature.com/sdata/">Scientific Data</a>, <a href="https://www.sciencedirect.com/journal/data-in-brief">Data in Brief</a>, etc.</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Do not forget to write good <strong>metadata</strong> (e.g.&nbsp;<a href="https://eml.ecoinformatics.org/">EML</a>) and <strong>data management plan</strong> (e.g.&nbsp;<a href="https://dmp.opidor.fr/">OPIDoR</a>)</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Develop <strong>tools</strong> to access and handle published data (e.g.&nbsp;API, R package, ShinyApp, etc.)</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Write a <strong>software paper</strong>: <a href="https://besjournals.onlinelibrary.wiley.com/journal/2041210x">Methods in Ecology &amp; Evolution</a>, <a href="https://joss.theoj.org/">Journal of Open Source Software</a>, etc.</li>
+</ul>
 <p><img src="img/cesab-logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
 <p><i class="fa-brands fa-github" aria-label="github"></i> &nbsp;<a href="https://github.com/frbcesab/work-group" class="uri">https://github.com/frbcesab/work-group</a></p>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn4"><p><a href="https://doi.org/10.1371/journal.pcbi.1005510" class="uri">https://doi.org/10.1371/journal.pcbi.1005510</a></p></li></ol></aside></section></section>
+</div>
+</section></section>
 
     </div>
   </div>

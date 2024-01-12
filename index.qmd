@@ -18,3 +18,7 @@ engine: knitr
 ```{r}
 #| child: "slides/introduction.qmd"
 ```
+
+```{r}
+#| child: "slides/data-management.qmd"
+```

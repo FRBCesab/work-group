@@ -1,0 +1,52 @@
+# {{< fa database >}} &nbsp;Data management
+
+## Raw data
+
+**General recommendations**[^wilson]
+
+- Save and backup the raw data
+- Never modify raw data (even for minor changes)
+- Raw data should be in a read-only mode (🔒)
+- Any modification produces an output or a derived data
+- Write code for data acquisition (when possible)
+  - database requests
+  - API requests
+  - `download.file()`, `wget`, `curl`, etc.
+- Describe and document raw data (`README`, metadata, etc.)
+
+
+## Derived data
+
+**General recommendations**[^wilson]
+
+- Modified raw data become a derived data (or an output)
+- Record all the steps used to process data ({{< fa brands r-project >}} `|` {{< fa brands python >}} `|` {{< fa terminal >}})
+- Create the data you wish to see in the world
+- Create analysis-friendly data: `tidy data`
+
+. . .
+
+![Source: <https://allisonhorst.com/other-r-fun>](img/tidy-data.jpg){width="50%"}
+
+
+## Data submission
+
+
+- Submit data to a **reputable DOI-issuing repository** so that others can access and cite it: [Zenodo](https://zenodo.org/), [OSF](https://osf.io/), etc.
+
+
+. . .
+
+- Write a **data paper**: [Scientific Data](https://www.nature.com/sdata/), [Data in Brief](https://www.sciencedirect.com/journal/data-in-brief), etc.
+
+. . .
+
+- Do not forget to write good **metadata** (e.g. [EML](https://eml.ecoinformatics.org/)) and **data management plan** (e.g. [OPIDoR](https://dmp.opidor.fr/))
+
+. . .
+
+- Develop **tools** to access and handle published data (e.g. API, R package, ShinyApp, etc.)
+
+. . .
+
+- Write a **software paper**: [Methods in Ecology & Evolution](https://besjournals.onlinelibrary.wiley.com/journal/2041210x), [Journal of Open Source Software](https://joss.theoj.org/), etc.
