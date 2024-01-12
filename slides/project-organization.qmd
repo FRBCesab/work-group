@@ -1,0 +1,295 @@
+# {{< fa folder >}} &nbsp;Project organization
+
+## Research compendium
+
+> The goal of a research compendium is to provide a ***standard*** and easily 
+recognisable way for ***organizing the digital materials*** of a project to enable 
+others to ***inspect***, ***reproduce***, and ***extend the research***.
+
+::: {.citation}
+Marwick B, Boettiger C & Mullen L (2018)[^marwick] 
+:::
+
+. . .
+
+<br><br>
+
+::: {.center}
+**Three  generic  principles**
+:::
+
+:::: { .columns }
+::: { .column .center width="33%"}
+1.<br>
+Files organized according to the **conventions** of the community
+:::
+::: { .column .center width="33%"}
+2.<br>
+Clear **separation** of data, method, and output
+:::
+::: { .column .center width="33%"}
+3.<br>
+Specify the **computational environment** that was used
+:::
+::::
+
+. . .
+
+<br>
+
+{{< fa hand-point-right >}} &nbsp;A research compendium must be **self-contained**
+
+[^marwick]: <https://doi.org/10.7287/peerj.preprints.3192v2>
+
+
+## Structures
+
+{{< fa hand-point-right >}} &nbsp;Strong flexibility in the structure of a compendium
+
+<br>
+
+:::: { .columns }
+::: { .column width="33%"}
+**Small compendium**
+
+```
+project/
+├─ .git/
+├─ data/ 🔒
+├─ code/
+│  └─ script.R
+├─ outputs/
+├─ project.Rproj
+├─ .gitignore
+└─ README.md
+```
+:::
+
+::: { .column width="33%"}
+**Medium compendium**
+
+```
+project/
+├─ .git/
+├─ data/
+│  ├─ raw-data/ 🔒
+│  └─ derived-data/
+├─ R/
+│  ├─ function-x.R
+│  └─ function-y.R
+├─ analyses/
+│  ├─ script-1.R
+│  └─ script-n.R
+├─ outputs/
+├─ project.Rproj
+├─ .gitignore
+├─ DESCRIPTION
+├─ LICENSE
+├─ make.R
+└─ README.md
+```
+:::
+
+::: { .column width="33%"}
+**Large compendium**
+
+```
+project/
+├─ .git/
+├─ .github/
+│  └─ workflows/
+│     ├─ workflow-1.yaml
+│     └─ workflow-n.yaml
+├─ .renv/
+├─ data/
+│  ├─ raw-data/ 🔒
+│  └─ derived-data/
+├─ R/
+│  ├─ function-x.R
+│  └─ function-y.R
+├─ analyses/
+│  ├─ script-x.R
+│  └─ script-n.R
+├─ outputs/
+├─ paper/
+│  ├─ references.bib
+│  ├─ style.csl
+│  └─ paper.Rmd
+├─ project.Rproj
+├─ .gitignore
+├─ DESCRIPTION
+├─ LICENSE
+├─ CITATION.cff
+├─ make.R
+├─ dockerfile
+├─ renv.lock
+└─ README.md
+```
+:::
+::::
+
+
+## RStudio Project
+
+Use the power of RStudio Project
+
+```
+File > New Project...
+```
+
+:::: { .columns }
+::: { .column width="50%"}
+![](img/rstudio-project.png){width="80%" fig-align="left"}
+:::
+
+::: { .column width="50%"}
+![](img/rstudio-newproject.png){width="80%" fig-align="left"}
+:::
+::::
+
+. . .
+
+RStudio IDE will create a `.Rproj` (simple text file) file at the root of the folder
+
+- Double-click on a `.Rproj` file to open a fresh instance of RStudio, w/ the working directory pointing at the folder root
+- This will help you to create self-contained workspace (= _compendium_)
+
+
+## Building robust paths
+
+::::{ .columns }
+:::{.column width="40%"}
+![Source: <https://allisonhorst.com/other-r-fun>](img/here.png)
+:::
+
+:::{.column width="60%"}
+
+<br>
+
+```{r}
+#| echo: true
+#| eval: false
+# Output of here::here() on Windows
+here::here()
+## [1] "C:/Users/janedoe/Documents/project"
+
+# Output of here::here() on MacOS
+here::here()
+## [1] "/Users/johndoe/Dropbox/work/project"
+
+# Output of here::here() on GNU/Linux
+here::here()
+## [1] "/home/johnsmith/git-projects/project"
+```
+
+<br>
+{{< fa hand-point-right >}} &nbsp;Use the package [`here`](https://here.r-lib.org/) to create project-relative paths
+
+```{r}
+#| echo: true
+#| eval: false
+# Build relative path ----
+here::here("data", "raw-data", "raw-data-1.csv")
+## [1] "/home/johnsmith/git-projects/project/data/raw-data/raw-data-1.csv"
+
+# Build relative path ----
+data <- read.csv(here::here("data", "raw-data", "raw-data-1.csv"))
+```
+:::
+::::
+
+
+<br>
+{{< fa hand-point-right >}} &nbsp;`here` will search for a `.Rproj` file (or a `.here` file) to define the working directory
+
+
+## The `README`
+
+
+::::{.columns}
+:::{.column width="60%"}
+A [`README`](https://en.wikipedia.org/wiki/README) is a text file that introduces and explains your project
+
+- each research compendium should contain a `README`
+- you can write different `README` (project, data, etc.)
+
+<br>
+
+{{< fa hand-point-right >}} &nbsp;[GitHub](https://github.com/) and other code hosting 
+platforms recognize and interpret `README` written in [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) 
+(`README.md`)
+
+<br>
+
+{{< fa lightbulb >}} &nbsp;If you want to run {{< fa brands r-project >}} code inside your `README`
+you can write a `README.Rmd` (or `.qmd`) and convert it to a `README.md`
+:::
+:::{.column width="40%"}
+![Source: <https://github.com/frbcesab/chessboard>](img/readme-github.png)
+:::
+::::
+
+
+## The `README`
+
+::::{.columns}
+:::{.column width="50%"}
+A good `README` should answer the following questions[^rpkg]:
+
+- Why should I use it?
+- How do I get it?
+- How do I use it?
+:::
+:::{.column width="50%"}
+**Main sections** (for a research compendium)
+
+- Title
+- Description
+- Content (file organization)
+- Prerequisites
+- Installation
+- Usage
+- License
+- Citation
+- Acknowledgements
+- References
+:::
+::::
+
+[^rpkg]: <https://r-pkgs.org/other-markdown.html#sec-readme>
+
+
+## Choose a `LICENSE`
+
+- By default your work will be release under exclusive copyright - [No License](https://choosealicense.com/no-permission/)
+
+. . .
+
+- **Always** select an appropriate license for your project
+
+. . .
+
+- Two major camps of **open source** licenses[^license]
+
+  - **Permissive** licenses
+  - **Copyleft** licenses
+
+. . . 
+
+<br>
+
+{{< fa hand-point-right >}} &nbsp;The [**choosealicense.com**](http://choosealicense.com/) website can help you choose
+
+
+. . .
+
+
+<br>
+
+{{< fa lightbulb >}} &nbsp;**Examples**
+
+  - you want a **permissive** license so people can use your **code** with minimal restrictions: [`MIT`](https://choosealicense.com/licenses/mit/) / [`Apache`](https://choosealicense.com/licenses/apache-2.0/) / [`BSD`](https://choosealicense.com/licenses/bsd-3-clause-clear/)
+  - you want a **copyleft** license so that all derivatives and bundles of your **code** are also open source: [`GPLv2`](https://choosealicense.com/licenses/gpl-2.0/) / [`GPLv3`](https://choosealicense.com/licenses/gpl-3.0/)
+  - your project primarily contains **data** and you want minimal restrictions: [`CC-0`](https://choosealicense.com/licenses/cc0-1.0/) / [`CC-BY`](https://choosealicense.com/licenses/cc-by-4.0/) / [`ODbL`](https://opendatacommons.org/licenses/odbl/)
+
+[^license]: <https://r-pkgs.org/license.html>

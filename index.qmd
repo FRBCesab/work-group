@@ -22,3 +22,7 @@ engine: knitr
 ```{r}
 #| child: "slides/data-management.qmd"
 ```
+
+```{r}
+#| child: "slides/project-organization.qmd"
+```
