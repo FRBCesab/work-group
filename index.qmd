@@ -30,3 +30,7 @@ engine: knitr
 ```{r}
 #| child: "slides/tracking-changes.qmd"
 ```
+
+```{r}
+#| child: "slides/collaboration.qmd"
+```

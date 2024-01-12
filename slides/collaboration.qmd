@@ -1,0 +1,110 @@
+# {{< fa brands github >}} &nbsp;Collaboration
+
+## Code hosting platforms
+
+GitHub and co are **cloud-based git repository hosting services**
+
+{{< fa hand-point-right >}} &nbsp;
+Perfect solutions to collaborate on projects tracked by `git`
+
+. . .
+
+<br>
+
+**Services**
+
+- Full integration of version control (commits, history, differences)
+- Easy collaboration w/ branches, forks, pull requests
+- Issues tracking system
+- Enhanced documentation rendering (README, Wiki)
+- Static website hosting
+- Automation & monitoring (CI/CD)
+
+
+## Code hosting platforms
+
+**Main platforms**
+
+::::{ .columns }
+:::{ .column width="50%" .center}
+![](img/github-logo.png){width="25%"}
+<br>
+[**GitHub**](https://github.com/)
+
+<br>
+![](img/bitbucket-logo.png){width="25%"}
+<br>
+[**BitBucket**](https://bitbucket.org/)
+:::
+:::{ .column width="50%" .center}
+![](img/gitlab-logo.png){width="25%"}
+<br>
+[**GitLab**](https://gitlab.com/)
+
+<br>
+![](img/sourceforge-logo.png){width="25%"}
+<br>
+[**SourceForge**](https://sourceforge.net/)
+:::
+::::
+
+
+
+## Presentation of GitHub
+
+::::{ .columns }
+:::{ .column width="50%"}
+**Overview**
+
+- Created in 2008
+- For-profit company (property of Microsoft since 2018)
+- Used by more than 100 million developers around the world
+
+<br>
+
+**Advantages**
+
+- User-friendly interface for `git`
+- Free account w/ unlimited public/private repositories
+- Organization account (w/ free plan)
+- Advanced tools for collaboration
+:::
+:::{ .column width="50%" .center}
+![](img/github-logo.png){width="50%"}
+:::
+::::
+
+
+## GitHub account
+
+::: {.center}
+![_Source:_ <https://github.com/ahasverus>](img/github-homepage.png){width="75%"}
+:::
+
+
+## GitHub organization
+
+::: {.center}
+![_Source:_ <https://github.com/frbcesab>](img/github-organization.png){width="75%"}
+:::
+
+
+
+## GitHub repository
+
+
+::: {.center}
+![_Source:_ <https://github.com/frbcesab/forcis>](img/github-repo.png){width="75%"}
+:::
+
+
+## GitHub issues
+
+::: {.center}
+![_Source:_ <https://github.com/frbcesab/forcis>](img/github-issues.png){width="75%"}
+:::
+
+
+## To go further
+
+{{< fa hand-point-right >}} &nbsp;[Reproducible research: Good practices](https://frbcesab.github.io/good-practices/#/fa-brands-github-collaboration)
