@@ -5,7 +5,7 @@
 :::: {.columns}
 
 ::: {.column .logo width="30%"}
-![](https://raw.githubusercontent.com/rdatatoolbox/.github/main/profile/logo-rdatatoolbox_150dpi.png)
+![](https://raw.githubusercontent.com/econetoolbox/econetoolbox.github.io/main/images/logo-networks_150dpi.png)
 :::
 
 ::: {.column width="70%"}
@@ -32,14 +32,19 @@ invisible(Sys.setlocale("LC_TIME", olocale))
 :::: {.columns}
 
 ::: {.column .author width="45%"}
-Nicolas Casajus<br/>
+Nicolas Casajus
+
+::: {.affiliation}
+Data scientist @ [FRB-CESAB](https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/)
+:::
+
 [{{< fa paper-plane >}}](mailto:nicolas.casajus@fondationbiodiversite.fr)
 [{{< fa brands github >}}](https://github.com/ahasverus)
 [{{< fa globe >}}](https://nicolascasajus.fr)
+[{{< ai google-scholar >}}](https://scholar.google.fr/citations?user=n1swa1UAAAAJ)
+[{{< ai orcid >}}](http://orcid.org/0000-0002-5537-5294)
 
-::: {.affiliation}
-{{< fa house >}} &nbsp;[FRB-CESAB](https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/)
-:::
+
 :::
 
 ::::
