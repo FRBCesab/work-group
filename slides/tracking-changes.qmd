@@ -1,0 +1,316 @@
+## Motivations
+
+::::{ .columns }
+:::{ .column width="60%" align="left"}
+![Project content (without `git`)](img/folder_without_git.png)
+:::
+:::{ .column width="40%" }
+**Questions**
+
+- Which version of `analyses.R` is the final one?
+- What about `data.csv`?
+- What are the differences between versions?
+- Who have contributed to these versions? When?
+
+**Comments**
+
+- It becomes difficult to find new versions names
+- And this folder: what a mess!
+:::
+::::
+
+<br>
+
+. . .
+
+::::{ .columns }
+:::{ .column width="60%" align="left"}
+{{< fa hand-point-right >}} &nbsp;We need a tool that deals with versions for us
+:::
+:::{ .column width="40%" }
+![](img/git-logo-long.png){width=50%}
+:::
+::::
+
+
+## Motivations
+
+::::{ .columns }
+:::{ .column width="60%" align="left"}
+![Project content (with `git`)](img/folder_with_git.png)
+:::
+:::{ .column width="40%" }
+:::
+::::
+
+<br>
+
+::::{ .columns }
+:::{ .column width="60%" align="left"}
+{{< fa hand-point-right >}} &nbsp;We need a tool that deals with versions for us
+:::
+:::{ .column width="40%" }
+![](img/git-logo-long.png){width=50%}
+:::
+::::
+
+
+## Presentation of `git`
+
+- Created by **Linus Torvalds** in 2005 for the development of the Linux kernel
+- [Distributed version control system](https://en.wikipedia.org/wiki/Distributed_version_control) (DVCS) - Peer-to-peer approach
+
+
+<br>
+
+::::{ .columns }
+:::{ .column width="60%" align="left"}
+:::
+:::{ .column width="40%"}
+![](img/git-logo-long.png)
+:::
+::::
+
+
+## Presentation of `git`
+
+- Created by **Linus Torvalds** in 2005 for the development of the Linux kernel
+- [Distributed version control system](https://en.wikipedia.org/wiki/Distributed_version_control) (DVCS) - Peer-to-peer approach
+
+
+<br>
+
+::::{ .columns }
+:::{ .column width="60%" align="left"}
+**Advantages of VCS (and `git`)**
+
+- make contributions transparent (what / who / when / why)
+- keep the entire history of a file (and project)
+- inspect a file throughout its life time
+- revert back to a previous version
+- handle multiple versions (branches)
+- keep your working copy clean
+- facilitate collaborations w/ code hosting platforms
+<br>(GitHub, GitLab, Bitbucket, etc.)
+- backup your project
+:::
+:::{ .column width="40%"}
+![](img/git-logo-long.png)
+:::
+::::
+
+
+## A word of warning
+
+
+**`Git`** and **`GitHub`** are **not the same thing**
+
+- `Git` is a free and open-source **software**
+- `GitHub` (and co) is a **web platform** to host and share projects that use `git`
+
+
+. . . 
+
+<br>
+
+In other words:
+
+> You do not need `GitHub` to use `git` but you cannot use `GitHub` without using `git`
+
+
+## GUI clients
+
+
+::::{ .columns }
+:::{ .column width="50%"}
+![](img/git-cli.png){width=100%}
+:::
+:::{ .column width="50%" align="left"}
+<br>
+
+- `Git` is a command-line interface (CLI)
+- You interact with `git` using a terminal
+- All commands start w/ the keyword `git`
+<br>(`git status / log / add / commit`)
+:::
+::::
+
+
+. . .
+
+{{< fa lightbulb >}} &nbsp;But a lot of [third-party tools](https://git-scm.com/downloads/guis) provides a graphical interface to `git`
+<br>(e.g. [RStudio](https://posit.co/download/rstudio-desktop/), [GitKraken](https://www.gitkraken.com/), [GitHub Desktop](https://desktop.github.com/), extensions for [VSCode](https://code.visualstudio.com/), [VSCodium](https://vscodium.com/), [neovim](https://neovim.io/), etc.)
+
+
+<br>
+
+> Just keep in mind that for some operations you will need to use the terminal
+
+
+
+## Zoom on RStudio
+
+::::{ .columns }
+:::{ .column width="100%"}
+**Git main panel**
+
+![](img/git-rstudio.png){width=80%}
+:::
+:::{ .column width="0%"}
+:::
+::::
+
+
+## Zoom on RStudio
+
+
+::::{ .columns }
+:::{ .column width="50%"}
+**Stage files, view differences and commit changes**
+
+![](img/rstudio-change.png){width=100%}
+:::
+:::{ .column width="50%"}
+**View history and versions**
+
+![](img/rstudio-history.png){width=100%}
+:::
+::::
+
+
+## How does `git` work?
+
+- `git` takes a sequence of **snapshots**
+- Each snapshot can contain changes for one or many file(s)
+- User chooses which files to _'save'_ in a snapshot and when
+<br>(`!=` file hosting services like Dropbox, Google Drive, etc.)
+
+
+. . .
+
+<br>
+
+{{< fa hand-point-right >}} &nbsp;In the `git` universe, a snapshot is a **version**, i.e. the state of the whole project at a specific point in time
+
+
+. . .
+
+<br>
+
+A snapshot is a two-step process:
+
+1. **Stage files**: select which files to add to the version
+2. **Commit changes**: save the version and add metadata (`commit message`)
+
+## Commits
+
+
+
+::::{.columns}
+:::{.column width=50%}
+When committing a new version (w/ `git commit`), the following information must be added:
+
+- **`WHO`** - the person who has made the changes
+<br>(automatically added by `git`)
+- **`WHEN`** - the date of the commit
+<br>(automatically added by `git`)
+- **`WHAT`** - the files that have been modified
+<br>(selected by the user w/ `git add`)
+- **`WHY`** - the reason of the commit, i.e. what has been done compared to the previous version
+<br>(added by the user w/ `git commit`)
+:::
+:::{.column width=50%}
+:::
+::::
+
+
+
+## Commits
+
+::::{.columns}
+:::{.column width=50%}
+When committing a new version (w/ `git commit`), the following information must be added:
+
+- **`WHO`** - the person who has made the changes
+<br>(automatically added by `git`)
+- **`WHEN`** - the date of the commit
+<br>(automatically added by `git`)
+- **`WHAT`** - the files that have been modified
+<br>(selected by the user w/ `git add`)
+- **`WHY`** - the reason of the commit, i.e. what has been done compared to the previous version
+<br>(added by the user w/ `git commit`)
+:::
+:::{.column width=50%}
+Print the `git` **history** w/ `git log`
+
+```bash
+git log --stat
+
+# (*) commit dc4366af56223f533a32ef38794b4e567b0b7422
+# Author: ahasverus <ahasverus@users.noreply.github.com>
+# Date:   Wed Jun 28 14:11:20 2023 +0200
+# 
+#     docs: update CITATION.cff file
+# 
+#  CITATION.cff | 6 +++---
+#  1 file changed, 3 insertions(+), 3 deletions(-)
+# 
+# (*) commit 75c0072892544f779105067efc17d361365554e1 
+# Author: Nicolas Casajus <nicolas.casajus@fondationbiodiversite.fr>
+# Date:   Wed Jun 28 14:00:15 2023 +0200
+# 
+#     docs: update references in README
+# 
+#  README.Rmd | 6 +++---
+#  README.md  | 6 +++---
+#  2 files changed, 6 insertions(+), 6 deletions(-)
+# 
+# (*) commit 6a00f3539636726c3715a7e94eea04bd30ef8f69
+# Author: Nicolas Casajus <nicolas.casajus@fondationbiodiversite.fr>
+# Date:   Wed Jun 28 12:39:48 2023 +0000
+# 
+#     style: align R code lines in MS
+# 
+#  joss-paper/paper.bib | 2 +-
+#  joss-paper/paper.md  | 8 ++++----
+#  2 files changed, 5 insertions(+), 5 deletions(-)
+#
+# (*) commit 6f7d632c7d1dad3acddfb128a2c4a07f1e8a4e9c
+# ...
+```
+:::
+::::
+
+
+## When should you commit?
+
+
+::::{.columns}
+:::{.column width=50%}
+![](img/in-case-of-fire.png){width=90%}
+:::
+:::{.column width=50%}
+:::
+::::
+
+
+## When should you commit?
+
+
+::::{.columns}
+:::{.column width=50%}
+![](img/in-case-of-fire.png){width=90%}
+:::
+:::{.column width=50%}
+<br>
+
+- Commit a new version when you reach a milestone
+- Create small and atomic commits
+- Commit a state that is actually working
+:::
+::::
+
+
+## To go further
+
+{{< fa hand-point-right >}} &nbsp;[Reproducible research: Good practices](https://frbcesab.github.io/good-practices/#/fa-code-branch-tracking-changes)
