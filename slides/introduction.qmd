@@ -68,34 +68,43 @@ Each degree of reproducibility requires **additional skills** and time. While so
 According to Wilson _et al._ (2017)[^wilson], good practices for a better reproducibility can be organized into the following six topics:
 
 <br/>
-<br/>
-<br/>
 
-:::: { .columns }
-::: { .column .center width="33%"}
+. . . 
+
 {{< fa database >}} &nbsp;Data management
-:::
-::: { .column .center width="33%"}
+
 {{< fa folder >}} &nbsp;Project organization
-:::
-::: { .column .center width="33%"}
+
 {{< fa code-branch >}} &nbsp;Tracking changes
-:::
-::::
 
-<br/>
-
-:::: { .columns }
-::: { .column .center width="33%"}
 {{< fa brands github >}} &nbsp;Collaboration
-:::
-::: { .column .center width="33%"}
+
 {{< fa brands markdown >}} &nbsp;Manuscript
-:::
-::: { .column .center width="33%"}
+
 {{< fa brands r-project >}} &nbsp;Code & Software
-:::
-::::
+
 
 
 [^wilson]: <https://doi.org/10.1371/journal.pcbi.1005510>
+
+
+## Plan
+
+We will just talk about:
+
+<br/>
+
+
+
+{{< fa database >}} &nbsp;Data management
+
+{{< fa folder >}} &nbsp;Project organization
+
+{{< fa code-branch >}} &nbsp;Tracking changes
+
+{{< fa brands github >}} &nbsp;Collaboration
+
+{{< fa brands markdown >}} &nbsp;~~Manuscript~~
+
+{{< fa brands r-project >}} &nbsp;~~Code & Software~~
+
