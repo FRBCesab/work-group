@@ -129,6 +129,13 @@ project/
 ::::
 
 
+## rcompendium
+
+{{< fa hand-point-right >}} &nbsp;The R package [`rcompendium`](https://github.com/FRBCesab/rcompendium) can help you creating a good structure
+
+![](img/rcompendium.png){width="50%" fig-align="left"}
+
+
 ## RStudio Project
 
 Use the power of RStudio Project
